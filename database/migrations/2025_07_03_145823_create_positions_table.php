@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('idEmpresa')->references('id')->on('empresas')->onDelete('cascade');
             $table->foreignId('idProducto')->references('id')->on('productos')->onDelete('cascade');
             $table->dateTime('fechaEntregaInicio');
-            $table->enum('moneda', ['Pesos', 'USD'])->default('USD');
+            $table->enum('moneda', ['AR$', 'USD'])->default('USD');
             $table->double('precio');
         });
     }
