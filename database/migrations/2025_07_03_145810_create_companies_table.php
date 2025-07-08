@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
-            $table->integer('cuit');
+            $table->bigInteger('cuit');
             $table->string('razonSocial')->nullable();
         });
     }
